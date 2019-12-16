@@ -9,14 +9,16 @@ import io.vertx.core.json.JsonObject;
 
 import java.util.ArrayList;
 
-public class DeviceManagerVerticle extends AbstractVerticle implements getRequestArray {
+/**
+ * @author zhouz
+ */
+public class DeviceManagerVerticle extends AbstractVerticle  {
     String address = "Device";
     String name = "DeviceVerticle";
     String operationString;
     String targetString;
     String usernameString ;
     String devicenameString ;
-    //ArrayList<String> request = new ArrayList<String>();
     ArrayList<String> deviceList = new ArrayList<String>();
 
     @Override
@@ -30,16 +32,16 @@ public class DeviceManagerVerticle extends AbstractVerticle implements getReques
             usernameString = request.getString("username");
             devicenameString = request.getString("devicename");
             //request = getRequestArray.getRequestArray(j);
-            if (targetString.equals("Device")){
-                if (operationString.equals("Create")){
+            if ("Device".equals(targetString)){
+                if ("Create".equals(operationString)){
                     deviceList.add(devicenameString);
                     //System.out.println(deviceList);
                     message.reply(" Device "+ devicenameString + " add successfully!");
                 }
             }
             else if (targetString.equals("Bind")){
-                String Devicename = devicenameString;
-                if (!deviceList.contains(Devicename)){
+                String deviceName = devicenameString;
+                if (!deviceList.contains(deviceName)){
                     message.reply("Device not found!");
                 }
                 else{

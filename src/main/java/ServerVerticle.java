@@ -10,6 +10,9 @@ import io.vertx.ext.web.handler.BodyHandler;
 
 import java.util.ArrayList;
 
+/**
+ * @author zhouz
+ */
 public class ServerVerticle extends AbstractVerticle {
     private HttpServer httpServer = null;
     private ArrayList<String> requestArray = new ArrayList<String>();
@@ -25,15 +28,16 @@ public class ServerVerticle extends AbstractVerticle {
         startFuture.complete();
         httpServer = vertx.createHttpServer();
         Router router = Router.router(vertx);
-        router.route().handler(BodyHandler.create());//获取并处理请求的消息体
-        Route route_get = router.route().method(HttpMethod.GET);
-        Route route_post = router.route().method(HttpMethod.POST);
-        route_get.handler(routingContext -> {
+        //获取并处理请求的消息体
+        router.route().handler(BodyHandler.create());
+        Route routeGet = router.route().method(HttpMethod.GET);
+        Route routePost = router.route().method(HttpMethod.POST);
+        routeGet.handler(routingContext -> {
             HttpServerResponse response = routingContext.response();
             response.putHeader("content-type", "text/plain");
             response.end("This is a get request!");
         });
-        route_post.handler(routingContext -> {
+        routePost.handler(routingContext -> {
             JsonObject request = routingContext.getBodyAsJson();
             operationString = request.getString("operation");
             targetString = request.getString("target");

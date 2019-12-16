@@ -2,10 +2,13 @@ import io.vertx.core.*;
 
 import java.util.ArrayList;
 
+/**
+ * @author zhouz
+ */
 public class ServerLauncher {
     private ArrayList<String> verticles = new ArrayList<String>();
     private Vertx vertx;
-    public static void main(String args[]){
+    public static void main(String[] args){
         new ServerLauncher().start();
     }
     private void start(){
@@ -27,7 +30,7 @@ public class ServerLauncher {
                 this.deployVerticles(voidAsyncResult1 -> {
                   if (voidAsyncResult1.succeeded()){
                       System.out.println("部署成功");
-                      System.out.println("现在是CODECHECK分支");
+                      //System.out.println("现在是CODECHECK分支");
                   }
                   else{
                       System.out.println("部署失败");

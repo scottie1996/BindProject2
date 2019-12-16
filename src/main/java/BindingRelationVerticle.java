@@ -5,6 +5,10 @@ import io.vertx.core.json.JsonObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+
+/**
+ * @author zhouz
+ */
 public class BindingRelationVerticle extends AbstractVerticle {
     String address = "Bind";
     String name = "BindingVerticle";
@@ -12,8 +16,7 @@ public class BindingRelationVerticle extends AbstractVerticle {
     String targetString;
     String usernameString ;
     String devicenameString ;
-    //ArrayList<String> request = new ArrayList<String>();
-    HashMap<String,String> BindMap = new HashMap<>();
+    HashMap<String,String> bindMap = new HashMap<>();
 
     @Override
     public void start(Future<Void> startFuture){
@@ -25,8 +28,9 @@ public class BindingRelationVerticle extends AbstractVerticle {
             usernameString = request.getString("username");
             devicenameString = request.getString("devicename");
             //request = getRequestArray.getRequestArray(j);
-            if(operationString.equals("Create")){
-                BindMap.put(usernameString,devicenameString);
+            //if(operationString.equals("Create")){
+            if("Create".equals(operationString)){
+                bindMap.put(usernameString,devicenameString);
                // System.out.println(BindMap);
                 message.reply("User " + usernameString +" and Device " + devicenameString + " bind successfully!");
             }

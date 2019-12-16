@@ -6,7 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="805ad7ef-9a76-4f5a-a132-f511344b49cf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BindingRelationVerticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BindingRelationVerticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DeviceManagerVerticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeviceManagerVerticle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ServerLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ServerLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ServerVerticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ServerVerticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserManagerVerticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserManagerVerticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/getRequestArray.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +65,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ServerLauncher" />
+        <item itemvalue="Application.ServerLauncher" />
+        <item itemvalue="Application.ServerLauncher" />
         <item itemvalue="Application.ServerLauncher" />
       </list>
     </recent_temporary>
@@ -118,6 +126,10 @@
       <screen x="1920" y="0" width="1344" height="800" />
     </state>
     <state x="2398" y="108" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1344.800@1920.0.1344.800" timestamp="1576462113288" />
+    <state x="2323" y="145" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576467133541">
+      <screen x="1920" y="0" width="1344" height="800" />
+    </state>
+    <state x="2323" y="145" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1344.800@1920.0.1344.800" timestamp="1576467133541" />
     <state x="2216" y="0" key="CommitChangelistDialog2" timestamp="1576464976231">
       <screen x="1920" y="0" width="1344" height="800" />
     </state>
@@ -166,10 +178,10 @@
     </state>
     <state width="1299" height="129" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1344.800@1920.0.1344.800" timestamp="1576461598653" />
     <state width="746" height="260" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1576316112554" />
-    <state x="234" y="0" width="1313" height="788" maximized="true" key="dock-window-1" timestamp="1576463868939">
+    <state x="234" y="0" width="1313" height="788" maximized="true" key="dock-window-1" timestamp="1576465141341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="234" y="0" width="1313" height="788" maximized="true" key="dock-window-1/0.0.1536.824/1920.0.1344.800@1920.0.1344.800" timestamp="1576463868939" />
+    <state x="234" y="0" width="1313" height="788" maximized="true" key="dock-window-1/0.0.1536.824/1920.0.1344.800@1920.0.1344.800" timestamp="1576465141341" />
     <state x="-6" y="0" width="546" height="830" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1576316415491" />
   </component>
 </project>

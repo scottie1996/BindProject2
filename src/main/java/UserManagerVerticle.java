@@ -4,6 +4,9 @@ import io.vertx.core.json.JsonObject;
 
 import java.util.ArrayList;
 
+/**
+ * @author zhouz
+ */
 public class UserManagerVerticle extends AbstractVerticle  {
     String address = "User";
     String name = "UserVerticle";
@@ -11,7 +14,6 @@ public class UserManagerVerticle extends AbstractVerticle  {
     String targetString;
     String usernameString ;
     String devicenameString;
-
     //ArrayList<String> request = new ArrayList<String>();
     ArrayList<String> userList = new ArrayList<String>();
 
@@ -26,15 +28,15 @@ public class UserManagerVerticle extends AbstractVerticle  {
                 usernameString = request.getString("username");
                 devicenameString = request.getString("devicename");
                 //request = getRequestArray.getRequestArray(j);
-                if (targetString.equals("User")){
+                if ("User".equals(targetString)){
                     if(operationString.equals("Create")){
                         userList.add(usernameString);
                         message.reply(" User " + usernameString + " add successfully!");
                     }
                 }
                 else if (targetString.equals("Bind")){
-                    String Username = usernameString;
-                    if (!userList.contains(Username)){
+                    String userName = usernameString;
+                    if (!userList.contains(userName)){
                         message.reply("User not found!");
                     }
                     else{
