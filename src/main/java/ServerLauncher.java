@@ -27,6 +27,7 @@ public class ServerLauncher {
                 this.deployVerticles(voidAsyncResult1 -> {
                   if (voidAsyncResult1.succeeded()){
                       System.out.println("部署成功");
+                      System.out.println("现在是CODECHECK分支");
                   }
                   else{
                       System.out.println("部署失败");
