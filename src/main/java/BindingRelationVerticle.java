@@ -7,6 +7,11 @@ import java.util.HashMap;
 
 
 /**
+ *
+ *
+ */
+
+/**
  * @author zhouz
  */
 public class BindingRelationVerticle extends AbstractVerticle {

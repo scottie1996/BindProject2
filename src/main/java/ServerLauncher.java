@@ -1,3 +1,5 @@
+import device.DeviceManagerVerticle;
+import server.ServerVerticle;
 import io.vertx.core.*;
 
 import java.util.ArrayList;

@@ -1,5 +1,6 @@
+package server;
+
 import io.vertx.core.AbstractVerticle;
-import io.vertx.core.Future;
 import io.vertx.core.http.HttpMethod;
 import io.vertx.core.http.HttpServer;
 import io.vertx.core.http.HttpServerResponse;
@@ -15,7 +16,7 @@ import java.util.ArrayList;
  */
 public class ServerVerticle extends AbstractVerticle {
     private HttpServer httpServer = null;
-    private ArrayList<String> requestArray = new ArrayList<String>();
+    private ArrayList<String> requestArray = new ArrayList<>();
     private JsonObject r = new JsonObject();
     String operationString;
     String targetString;
@@ -24,8 +25,11 @@ public class ServerVerticle extends AbstractVerticle {
 
 
     @Override
-    public void start(Future<Void> startFuture){
-        startFuture.complete();
+    public void start(){
+        initMsgStoreConsumer();
+        initMsgRouteConsumer();
+
+
         httpServer = vertx.createHttpServer();
         Router router = Router.router(vertx);
         //获取并处理请求的消息体
@@ -123,4 +127,11 @@ public class ServerVerticle extends AbstractVerticle {
         httpServer.requestHandler(router::accept).listen(8080);
     }
 
+    private void initMsgStoreConsumer(){
+
+    }
+
+    private void initMsgRouteConsumer(){
+
+    }
 }
